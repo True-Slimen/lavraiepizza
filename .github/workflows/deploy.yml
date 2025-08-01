@@ -36,5 +36,5 @@ jobs:
         username: ${{ secrets.username }}
         password: ${{ secrets.password }}
         server-dir: /lavraiepizza.fr/
-        local-dir: dist
+        local-dir: dist/
         dangerous-clean-slate: true
