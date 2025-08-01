@@ -4,7 +4,9 @@
 
 <template>
   <nav>
-    Je suis la nav
+    <RouterLink to="/">
+      Go to Home
+    </RouterLink>
   </nav>
 </template>
 
