@@ -10,6 +10,11 @@ body {
   position: relative;
 }
 
+body * {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
 .subtitle {
   padding-left: 15px;
   position: relative;
