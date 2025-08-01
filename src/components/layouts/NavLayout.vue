@@ -55,4 +55,15 @@ import Logolayout from "@/components/layouts/Logolayout.vue";
   width: 70px;
   height: 70px;
 }
+
+@media screen and (width < 769px) {
+  .medal{
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+  }
+  .navbar-center span{
+    font-size: 28px;
+  }
+}
 </style>
