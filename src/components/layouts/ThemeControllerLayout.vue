@@ -1,19 +1,28 @@
 <script setup lang="ts">
+import { ref, computed } from "vue";
+import {useAppStore} from "@/stores/appStore.ts";
 
+const store = useAppStore();
+const mode = ref(false);
+
+const theme = computed(() => {
+  return mode.value ? "coffee" : "caramellatte";
+});
 </script>
 
 <template>
   <label class="swap swap-rotate">
     <!-- this hidden checkbox controls the state -->
     <input
+      v-model="mode"
       type="checkbox"
       class="theme-controller"
-      value="synthwave"
+      @click="store.setTheme(theme)"
     >
 
     <!-- sun icon -->
     <svg
-      class="swap-off h-10 w-10 fill-current"
+      class="swap-off h-7 w-7 fill-current"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >
@@ -24,7 +33,7 @@
 
     <!-- moon icon -->
     <svg
-      class="swap-on h-10 w-10 fill-current"
+      class="swap-on h-7 w-7 fill-current"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
     >

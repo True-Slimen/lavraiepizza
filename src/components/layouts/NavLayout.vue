@@ -1,9 +1,11 @@
 <script setup lang="ts">
 
+import ThemeControllerLayout from "@/components/layouts/ThemeControllerLayout.vue";
+import Logolayout from "@/components/layouts/Logolayout.vue";
 </script>
 
 <template>
-  <div class="navbar bg-base-100 shadow-sm">
+  <div class="navbar bg-base-200 shadow-sm">
     <div class="navbar-start">
       <div class="dropdown">
         <div
@@ -31,20 +33,26 @@
           <RouterLink to="/">
             Accueil
           </RouterLink>
-          <li><a>Portfolio</a></li>
-          <li><a>About</a></li>
         </ul>
       </div>
     </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost text-xl font-thin">La <strong class="font-bold">vraie</strong> pizza</a>
-    </div>
-    <div class="navbar-end">
+    <a
+      href="/"
+      class="navbar-center"
+    >
+      <span class="btn btn-ghost text-4xl font-thin">La <strong class="font-bold">vraie</strong> pizza</span>
+      <Logolayout class="mx-auto medal" />
+    </a>
+    <div class="navbar-end pe-3">
       <ThemeControllerLayout />
     </div>
   </div>
 </template>
 
 <style lang="scss">
-
+.medal{
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+}
 </style>

@@ -1,6 +1,28 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light, dark, coffee --default;
+  themes: caramellatte, coffee --default;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 140px;
+  position: relative;
+}
+
+.subtitle {
+  padding-left: 15px;
+  position: relative;
+}
+.subtitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 15px;
+  background-color: currentColor;
 }
 
 /*:root {*/
