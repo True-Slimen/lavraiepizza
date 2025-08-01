@@ -5,6 +5,11 @@ const routes: RouteRecordRaw[] = [
     path: "/",
     component: () => import("@/pages/HomePage.vue"),
     name: "homePage",
+  },
+  {
+    path: "/login",
+    component: () => import("@/pages/LoginPage.vue"),
+    name: "loginPage",
   }
   // Dynamic Import
 

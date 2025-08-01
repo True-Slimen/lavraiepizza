@@ -99,6 +99,9 @@ import CountDown from "@/components/common/CountDown.vue";
         </svg></span> &nbsp;pizza
     </h1>
     <hr>
+    <p class="mt-3 italic text-center">
+      Le concours pour mettre tout le monde d'accord.
+    </p>
     <div class="flex countdown-wrapper">
       <CountDown class="mt-7" />
     </div>
