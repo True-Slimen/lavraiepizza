@@ -5,7 +5,7 @@ import Logolayout from "@/components/layouts/Logolayout.vue";
 </script>
 
 <template>
-  <div class="navbar bg-base-200 shadow-sm">
+  <div class="navbar text-base-content bg-base-200 shadow-sm">
     <div class="navbar-start">
       <div class="dropdown">
         <div
@@ -40,7 +40,7 @@ import Logolayout from "@/components/layouts/Logolayout.vue";
       href="/"
       class="navbar-center"
     >
-      <span class="btn btn-ghost text-4xl font-thin">La <strong class="font-bold">vraie</strong> pizza</span>
+      <span class="btn btn-ghost text-base-content text-4xl font-thin">La <strong class="font-bold">vraie</strong> pizza</span>
       <Logolayout class="mx-auto medal" />
     </a>
     <div class="navbar-end pe-3">
