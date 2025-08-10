@@ -12,19 +12,31 @@ const props = defineProps<{
     class="wrapper"
     :style="`max-width: ${props.width}px; height: auto;`"
   >
-    <img
-      :src="props.path"
-      alt=""
-    >
-    <div class="img-border" />
+    <div class="inner-wrapper">
+      <img
+        :src="props.path"
+        alt=""
+      >
+      <div class="img-border" />
+    </div>
+    <em class="legend">Julien le 3 août 2025 sur la croisette de Sète.</em>
   </div>
 </template>
 
 <style lang="scss">
+.legend {
+  font-size: 12px;
+  position: absolute;
+  bottom: -24px;
+}
+
 .wrapper {
-  border-radius: 20px;
-  overflow: hidden;
   position: relative;
+}
+
+.wrapper .inner-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
   width: 100%;
 }
 img {
@@ -32,7 +44,7 @@ img {
   height: 100%;
 }
 .img-border {
-  height: calc(100% - 3%);
+  height: calc(100% - 2%);
   width: calc(100% - 3%);
   border: 2px solid currentColor;
   top: 50%;
@@ -40,21 +52,20 @@ img {
   transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 15px;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.53);
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.23);
    transition: all 0.1s;
 }
 
-.wrapper:hover .img-border {
-    height: calc(100% - 0%);
-    width: calc(100% - 0%);
-    border-radius: 20px;
+.wrapper .inner-wrapper:hover .img-border {
+  height: calc(100% - 0%);
+  width: calc(100% - 0%);
+  border-radius: 20px;
   border: 1px solid currentColor;
-
-   transition: all 0.1s;
+  transition: all 0.1s;
 }
 
 @media screen and (width < 1024px) {
-  .wrapper {
+  .wrapper .inner-wrapper {
     margin: 0 auto!important;
   }
 }</style>
